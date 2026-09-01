@@ -207,14 +207,32 @@ z-index: 3;
       font-weight: bold;
     }
 
-    .matchup {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 15px;
-      margin-top: 10px;
-      font-weight: bold;
-      font-size: 18px;
+matchup {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 18px;
+    margin: 10px 12px;
+    padding: 14px 16px;
+    font-weight: bold;
+    font-size: 17px;
+    background: rgba(0,0,0,.22);
+    border: 1px solid rgba(221,167,67,.22);
+    border-radius: 10px;
+}
+
+.matchup span:first-child {
+    text-align: left;
+}
+
+.matchup .vs {
+    text-align: center;
+    min-width: 35px;
+}
+
+.matchup span:last-child {
+    text-align: right;
+}
     }
 
     .vs {
