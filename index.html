@@ -487,14 +487,12 @@ z-index: 3;
     <span>VER EQUIPOS →</span>
 </a>
 
-    <a href="#calendario" class="card category-card">
+   
+<a href="#calendario-senior"
+   onclick="document.getElementById('calendario-senior').hidden=false; document.getElementById('calendario-senior').open=true;"
+   class="card category-card">
   <h3>📅 Calendario</h3>
-  <p>
-    DÍA 1: 4:00 PM · 7:00 PM<br>
-    DÍA 2: 6:00 PM · 8:00 PM<br>
-    DÍA 3: 11:00 AM · 3:00 PM · 6:00 PM · 8:00 PM<br>
-    DÍA 4: 10:00 AM SF1 · 12:00 PM SF2 · 2:00 PM FINAL 🏆
-  </p>
+  <p>Calendario de juegos de la categoría SENIOR</p>
   <span>VER CALENDARIO →</span>
 </a>
 
@@ -514,6 +512,37 @@ z-index: 3;
 
 </section>
 
+<details id="calendario-senior" class="game" hidden>
+  <summary class="game-date">📅 HORARIOS DE JUEGO · SENIOR</summary>
+
+  <div class="matchup">
+    <span>DÍA 1</span>
+    <span>4:00 PM · 7:00 PM</span>
+  </div>
+
+  <div class="matchup">
+    <span>DÍA 2</span>
+    <span>6:00 PM · 8:00 PM</span>
+  </div>
+
+  <div class="matchup">
+    <span>DÍA 3</span>
+    <span>11:00 AM · 3:00 PM · 6:00 PM · 8:00 PM</span>
+  </div>
+
+  <div class="matchup">
+    <span>DÍA 4</span>
+    <span>10:00 AM SF1 · 12:00 PM SF2 · 2:00 PM FINAL 🏆</span>
+  </div>
+
+  <div style="text-align:center; margin-top:15px;">
+    <button
+      onclick="document.getElementById('calendario-senior').open=false; document.getElementById('calendario-senior').hidden=true;"
+      class="btn">
+      CERRAR HORARIOS
+    </button>
+  </div>
+</details>
 <section id="senior-femenino">
 
   <div class="section-title">
@@ -530,13 +559,11 @@ z-index: 3;
     <span>VER EQUIPOS →</span>
 </a>
 
-   <a href="#calendario" class="card category-card">
+   <a href="#calendario-senior-femenino"
+   onclick="document.getElementById('calendario-senior-femenino').hidden=false; document.getElementById('calendario-senior-femenino').open=true;"
+   class="card category-card">
   <h3>📅 Calendario</h3>
-  <p>
-    DÍA 1: 5:00 PM<br>
-    DÍA 2: 5:00 PM · 7:00 PM<br>
-    DÍA 3: 10:00 AM · 12:00 PM SF1 · 2:00 PM SF2 · 4:00 PM FINAL 🏆
-  </p>
+  <p>Calendario de juegos de la categoría SENIOR FEMENINO</p>
   <span>VER CALENDARIO →</span>
 </a>
 
@@ -555,6 +582,33 @@ z-index: 3;
   </div>
 
 </section>
+  <details id="calendario-senior-femenino" class="game" hidden>
+  <summary class="game-date">📅 HORARIOS DE JUEGO · SENIOR FEMENINO</summary>
+
+  <div class="matchup">
+    <span>DÍA 1</span>
+    <span>5:00 PM</span>
+  </div>
+
+  <div class="matchup">
+    <span>DÍA 2</span>
+    <span>5:00 PM · 7:00 PM</span>
+  </div>
+
+  <div class="matchup">
+    <span>DÍA 3</span>
+    <span>10:00 AM · 12:00 PM SF1 · 2:00 PM SF2 · 4:00 PM FINAL 🏆</span>
+  </div>
+
+  <div style="text-align:center; margin-top:15px;">
+    <button
+      onclick="document.getElementById('calendario-senior-femenino').open=false; document.getElementById('calendario-senior-femenino').hidden=true;"
+      class="btn">
+      CERRAR HORARIOS
+    </button>
+  </div>
+
+</details>
 <section id="calendario">
 <div class="section-title">
     <small>Programación Oficial</small>
