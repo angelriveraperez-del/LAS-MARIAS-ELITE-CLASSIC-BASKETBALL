@@ -418,7 +418,7 @@ z-index: 3;
     <span>VER EQUIPOS →</span>
 </a>
 
-   <a href="#calendario-junior" class="card category-card">
+   <a href="#calendario-junior" onclick="document.getElementById('calendario-junior').hidden=false; document.getElementById('calendario-junior').open=true;" class="card category-card">
   <h3>📅 Calendario</h3>
   <p>Calendario de juegos de la categoría JUNIOR</p>
   <span>VER CALENDARIO →</span>
@@ -440,7 +440,8 @@ z-index: 3;
   </div>
 
 </section>
-<details id="calendario-junior" class="game">
+
+<details id="calendario-junior" class="game" hidden>
   <summary class="game-date">📅 HORARIOS DE JUEGO · JUNIOR</summary>
 
   <div class="matchup">
