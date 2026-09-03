@@ -503,12 +503,8 @@ z-index: 3;
 </a>
 
     <a href="#brackets-senior"
-   onclick="document.getElementById('brackets-senior').open=true;"
-   class="card category-card">
-    <h3>🔥 Bracket</h3>
-    <p>Bracket oficial de la categoría SENIOR</p>
-    <span>VER BRACKET →</span>
-</a>
+  onclick="document.getElementById('brackets-senior').hidden=false; document.getElementById('brackets-senior').open=true;"
+  class="card category-card">
 
   </div>
 
@@ -865,70 +861,98 @@ z-index: 3;
 
 </section>
 <!-- BRACKET SENIOR OCULTO -->
-<details id="brackets-senior" class="game">
-  <summary class="game-date">🔥 VER BRACKET SENIOR</summary>
+<div id="brackets-senior" hidden>
+<div style="overflow-x:auto; padding:25px 10px;">
 
-  <div style="overflow-x:auto; padding:20px 5px;">
+  <h2 style="text-align:center;">🔥 BRACKET SENIOR</h2>
+  <p style="text-align:center;"><strong>12 equipos · Eliminación sencilla</strong></p>
 
-    <div style="display:flex; align-items:center; gap:35px; min-width:1100px;">
+  <div style="display:flex; align-items:center; justify-content:center; gap:30px; min-width:1250px;">
 
-      <!-- PRIMERA RONDA -->
-      <div style="min-width:230px;">
+    <!-- LADO IZQUIERDO -->
+    <div style="display:flex; align-items:center; gap:18px;">
+
+      <div style="min-width:220px;">
         <h3 style="text-align:center;">PRIMERA RONDA</h3>
 
-        <div class="matchup" style="margin-bottom:20px;">
+        <div class="matchup" style="margin-bottom:55px;">
           <span>Eva Patria y Custodio B</span>
           <span class="vs">VS</span>
           <span>Catalina Morales B</span>
         </div>
 
-        <div class="matchup" style="margin-bottom:20px;">
-          <span>Eladio Tirado B</span>
-          <span class="vs">VS</span>
-          <span>Angel P. Millán B</span>
-        </div>
-
-        <div class="matchup" style="margin-bottom:20px;">
+        <div class="matchup">
           <span>Quebrada High</span>
           <span class="vs">VS</span>
           <span>Luis Felipe Crespo</span>
         </div>
-
-        <div class="matchup">
-          <span>Patria Latorre</span>
-          <span class="vs">VS</span>
-          <span>CDI Isabela</span>
-        </div>
       </div>
 
-      <!-- CONECTORES -->
-      <div style="font-size:42px; line-height:2.8;">
-        }<br>
-        }<br>
-        }<br>
-        }
-      </div>
+      <div style="font-size:60px;">}</div>
 
-      <!-- CUARTOS DE FINAL -->
-      <div style="min-width:230px;">
+      <div style="min-width:220px;">
         <h3 style="text-align:center;">CUARTOS</h3>
 
-        <div class="matchup" style="margin-bottom:35px;">
+        <div class="matchup" style="margin-bottom:55px;">
           <span>Eladio Tirado A</span>
           <span class="vs">VS</span>
           <span>Ganador Juego 1</span>
         </div>
 
-        <div class="matchup" style="margin-bottom:35px;">
-          <span>Eva Patria y Custodio A</span>
-          <span class="vs">VS</span>
-          <span>Ganador Juego 2</span>
-        </div>
-
-        <div class="matchup" style="margin-bottom:35px;">
+        <div class="matchup">
           <span>Angel P. Millán A</span>
           <span class="vs">VS</span>
           <span>Ganador Juego 3</span>
+        </div>
+      </div>
+
+      <div style="font-size:70px;">}</div>
+
+      <div style="min-width:210px;">
+        <h3 style="text-align:center;">SEMIFINAL</h3>
+
+        <div class="matchup">
+          <span>Ganador Cuarto 1</span>
+          <span class="vs">VS</span>
+          <span>Ganador Cuarto 3</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FINAL -->
+    <div style="min-width:220px; text-align:center;">
+      <h2>🏆 FINAL</h2>
+
+      <div class="matchup">
+        <span>Ganador Semifinal Izquierda</span>
+        <span class="vs">VS</span>
+        <span>Ganador Semifinal Derecha</span>
+      </div>
+    </div>
+
+    <!-- LADO DERECHO -->
+    <div style="display:flex; align-items:center; gap:18px;">
+
+      <div style="min-width:210px;">
+        <h3 style="text-align:center;">SEMIFINAL</h3>
+
+        <div class="matchup">
+          <span>Ganador Cuarto 2</span>
+          <span class="vs">VS</span>
+          <span>Ganador Cuarto 4</span>
+        </div>
+      </div>
+
+      <div style="font-size:70px;">{</div>
+
+      <div style="min-width:220px;">
+        <h3 style="text-align:center;">CUARTOS</h3>
+
+        <div class="matchup" style="margin-bottom:55px;">
+          <span>Eva Patria y Custodio A</span>
+          <span class="vs">VS</span>
+          <span>Ganador Juego 2</span>
         </div>
 
         <div class="matchup">
@@ -938,49 +962,39 @@ z-index: 3;
         </div>
       </div>
 
-      <!-- CONECTORES -->
-      <div style="font-size:55px; line-height:4;">
-        }<br>
-        }
-      </div>
+      <div style="font-size:60px;">{</div>
 
-      <!-- SEMIFINALES -->
-      <div style="min-width:230px;">
-        <h3 style="text-align:center;">SEMIFINALES</h3>
+      <div style="min-width:220px;">
+        <h3 style="text-align:center;">PRIMERA RONDA</h3>
 
-        <div class="matchup" style="margin-bottom:100px;">
-          <span>Ganador Cuarto 1</span>
+        <div class="matchup" style="margin-bottom:55px;">
+          <span>Eladio Tirado B</span>
           <span class="vs">VS</span>
-          <span>Ganador Cuarto 3</span>
+          <span>Angel P. Millán B</span>
         </div>
 
         <div class="matchup">
-          <span>Ganador Cuarto 2</span>
+          <span>Patria Latorre</span>
           <span class="vs">VS</span>
-          <span>Ganador Cuarto 4</span>
-        </div>
-      </div>
-
-      <!-- CONECTOR -->
-      <div style="font-size:70px;">
-        }
-      </div>
-
-      <!-- FINAL -->
-      <div style="min-width:230px;">
-        <h3 style="text-align:center;">🏆 FINAL</h3>
-
-        <div class="matchup">
-          <span>Ganador Semifinal 1</span>
-          <span class="vs">VS</span>
-          <span>Ganador Semifinal 2</span>
+          <span>CDI Isabela</span>
         </div>
       </div>
 
     </div>
 
   </div>
-</details>
+
+  <div style="text-align:center; margin-top:25px;">
+    <button
+      onclick="document.getElementById('brackets-senior').hidden=true;"
+      class="btn">
+      CERRAR BRACKET
+    </button>
+  </div>
+
+</div>
+
+</div>  
 
 <section id="equipos">
 
