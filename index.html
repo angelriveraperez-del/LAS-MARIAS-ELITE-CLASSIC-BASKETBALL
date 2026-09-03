@@ -502,7 +502,9 @@ z-index: 3;
     <span>VER RESULTADOS →</span>
 </a>
 
-    <a href="#brackets-senior" class="card category-card">
+    <a href="#brackets-senior"
+   onclick="document.getElementById('brackets-senior').open=true;"
+   class="card category-card">
     <h3>🔥 Bracket</h3>
     <p>Bracket oficial de la categoría SENIOR</p>
     <span>VER BRACKET →</span>
@@ -860,91 +862,125 @@ z-index: 3;
     </div>
 
   </div>
-<div id="brackets-senior" class="card" style="margin-top:30px;">
 
-  <h2>🔥 BRACKET SENIOR</h2>
-  <p><strong>12 equipos · Eliminación sencilla</strong></p>
-
-  <h3>🏀 PRIMERA RONDA</h3>
-
-  <div class="matchup">
-    <span>Eva Patria y Custodio B</span>
-    <span class="vs">VS</span>
-    <span>Catalina Morales B</span>
-  </div>
-
-  <div class="matchup">
-    <span>Eladio Tirado B</span>
-    <span class="vs">VS</span>
-    <span>Angel P. Millán B</span>
-  </div>
-
-  <div class="matchup">
-    <span>Quebrada High</span>
-    <span class="vs">VS</span>
-    <span>Luis Felipe Crespo</span>
-  </div>
-
-  <div class="matchup">
-    <span>Patria Latorre</span>
-    <span class="vs">VS</span>
-    <span>CDI Isabela</span>
-  </div>
-
-
-  <h3>➡️ CUARTOS DE FINAL</h3>
-
-  <div class="matchup">
-    <span>Eladio Tirado A</span>
-    <span class="vs">VS</span>
-    <span>Ganador Juego 1</span>
-  </div>
-
-  <div class="matchup">
-    <span>Eva Patria y Custodio A</span>
-    <span class="vs">VS</span>
-    <span>Ganador Juego 2</span>
-  </div>
-
-  <div class="matchup">
-    <span>Angel P. Millán A</span>
-    <span class="vs">VS</span>
-    <span>Ganador Juego 3</span>
-  </div>
-
-  <div class="matchup">
-    <span>Maricao</span>
-    <span class="vs">VS</span>
-    <span>Ganador Juego 4</span>
-  </div>
-
-
-  <h3>🔥 SEMIFINALES</h3>
-
-  <div class="matchup">
-    <span>Ganador Cuarto 1</span>
-    <span class="vs">VS</span>
-    <span>Ganador Cuarto 3</span>
-  </div>
-
-  <div class="matchup">
-    <span>Ganador Cuarto 2</span>
-    <span class="vs">VS</span>
-    <span>Ganador Cuarto 4</span>
-  </div>
-
-
-  <h3>🏆 FINAL</h3>
-
-  <div class="matchup">
-    <span>Ganador Semifinal 1</span>
-    <span class="vs">VS</span>
-    <span>Ganador Semifinal 2</span>
-  </div>
-
-</div>
 </section>
+<!-- BRACKET SENIOR OCULTO -->
+<details id="brackets-senior" class="game">
+  <summary class="game-date">🔥 VER BRACKET SENIOR</summary>
 
+  <div style="overflow-x:auto; padding:20px 5px;">
+
+    <div style="display:flex; align-items:center; gap:35px; min-width:1100px;">
+
+      <!-- PRIMERA RONDA -->
+      <div style="min-width:230px;">
+        <h3 style="text-align:center;">PRIMERA RONDA</h3>
+
+        <div class="matchup" style="margin-bottom:20px;">
+          <span>Eva Patria y Custodio B</span>
+          <span class="vs">VS</span>
+          <span>Catalina Morales B</span>
+        </div>
+
+        <div class="matchup" style="margin-bottom:20px;">
+          <span>Eladio Tirado B</span>
+          <span class="vs">VS</span>
+          <span>Angel P. Millán B</span>
+        </div>
+
+        <div class="matchup" style="margin-bottom:20px;">
+          <span>Quebrada High</span>
+          <span class="vs">VS</span>
+          <span>Luis Felipe Crespo</span>
+        </div>
+
+        <div class="matchup">
+          <span>Patria Latorre</span>
+          <span class="vs">VS</span>
+          <span>CDI Isabela</span>
+        </div>
+      </div>
+
+      <!-- CONECTORES -->
+      <div style="font-size:42px; line-height:2.8;">
+        }<br>
+        }<br>
+        }<br>
+        }
+      </div>
+
+      <!-- CUARTOS DE FINAL -->
+      <div style="min-width:230px;">
+        <h3 style="text-align:center;">CUARTOS</h3>
+
+        <div class="matchup" style="margin-bottom:35px;">
+          <span>Eladio Tirado A</span>
+          <span class="vs">VS</span>
+          <span>Ganador Juego 1</span>
+        </div>
+
+        <div class="matchup" style="margin-bottom:35px;">
+          <span>Eva Patria y Custodio A</span>
+          <span class="vs">VS</span>
+          <span>Ganador Juego 2</span>
+        </div>
+
+        <div class="matchup" style="margin-bottom:35px;">
+          <span>Angel P. Millán A</span>
+          <span class="vs">VS</span>
+          <span>Ganador Juego 3</span>
+        </div>
+
+        <div class="matchup">
+          <span>Maricao</span>
+          <span class="vs">VS</span>
+          <span>Ganador Juego 4</span>
+        </div>
+      </div>
+
+      <!-- CONECTORES -->
+      <div style="font-size:55px; line-height:4;">
+        }<br>
+        }
+      </div>
+
+      <!-- SEMIFINALES -->
+      <div style="min-width:230px;">
+        <h3 style="text-align:center;">SEMIFINALES</h3>
+
+        <div class="matchup" style="margin-bottom:100px;">
+          <span>Ganador Cuarto 1</span>
+          <span class="vs">VS</span>
+          <span>Ganador Cuarto 3</span>
+        </div>
+
+        <div class="matchup">
+          <span>Ganador Cuarto 2</span>
+          <span class="vs">VS</span>
+          <span>Ganador Cuarto 4</span>
+        </div>
+      </div>
+
+      <!-- CONECTOR -->
+      <div style="font-size:70px;">
+        }
+      </div>
+
+      <!-- FINAL -->
+      <div style="min-width:230px;">
+        <h3 style="text-align:center;">🏆 FINAL</h3>
+
+        <div class="matchup">
+          <span>Ganador Semifinal 1</span>
+          <span class="vs">VS</span>
+          <span>Ganador Semifinal 2</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</details>
 
 <section id="equipos">
 
