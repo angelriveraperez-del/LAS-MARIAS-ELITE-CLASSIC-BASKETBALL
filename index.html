@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Las Marías Elite Classic Basketball</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <style>
     * {
@@ -34,7 +35,12 @@
       --crema: #f4f0e6;
       --gris: #a8aaa8;
     }
-
+.icon {
+  color: var(--dorado);
+  font-size: 1.25em;
+  margin-right: 8px;
+  vertical-align: middle;
+}
     header {
     min-height: 85vh;
     display: flex;
@@ -413,26 +419,26 @@ z-index: 3;
   <div class="grid">
 
     <a href="#equipos-junior" class="card category-card">
-    <h3>🏀 Equipos</h3>
+    <h3><i class="fa-solid fa-users icon"></i>Equipos</h3>
     <p>12 equipos participantes</p>
     <span>VER EQUIPOS →</span>
 </a>
 
    <a href="#calendario-junior" onclick="document.getElementById('calendario-junior').hidden=false; document.getElementById('calendario-junior').open=true;" class="card category-card">
-  <h3>📅 Calendario</h3>
+  <h3><i class="fa-solid fa-calendar-days icon"></i>Calendario</h3>
   <p>Calendario de juegos de la categoría JUNIOR</p>
   <span>VER CALENDARIO →</span>
 </a>
 
 
     <a href="#resultados-junior" class="card category-card">
-    <h3>🏆 Resultados</h3>
+    <h3><i class="fa-solid fa-trophy icon"></i>Resultados</h3>
     <p>Resultados oficiales de la categoría JUNIOR</p>
     <span>VER RESULTADOS →</span>
 </a>
 
     <a href="#brackets-junior" class="card category-card">
-    <h3>🔥 Bracket</h3>
+    <h3><i class="fa-solid fa-diagram-project icon"></i>Bracket</h3>
     <p>Bracket oficial de la categoría JUNIOR</p>
     <span>VER BRACKET →</span>
 </a>
@@ -442,7 +448,7 @@ z-index: 3;
 </section>
 
 <details id="calendario-junior" class="game" hidden>
-  <summary class="game-date">📅 HORARIOS DE JUEGO · JUNIOR</summary>
+  <summary class="game-date"><i class="fa-solid fa-calendar-days icon"></i>HORARIOS DE JUEGO · JUNIOR</summary>
 
   <div class="matchup">
     <span>DÍA 1</span>
@@ -461,7 +467,7 @@ z-index: 3;
 
   <div class="matchup">
     <span>DÍA 4</span>
-    <span>9:00 AM SF1 · 11:00 AM SF2 · 1:00 PM FINAL 🏆</span>
+    <span>9:00 AM SF1 · 11:00 AM SF2 · 1:00 PM FINAL <i class="fa-solid fa-trophy icon"></i></span>
   </div>
 <div style="text-align:center; margin-top:15px;">
   <button
@@ -482,7 +488,7 @@ z-index: 3;
   <div class="grid">
 
     <a href="#equipos-senior" class="card category-card">
-    <h3>🏀 Equipos</h3>
+    <h3><i class="fa-solid fa-users icon"></i>Equipos</h3>
     <p>12 equipos participantes</p>
     <span>VER EQUIPOS →</span>
 </a>
@@ -491,13 +497,13 @@ z-index: 3;
 <a href="#calendario-senior"
    onclick="document.getElementById('calendario-senior').hidden=false; document.getElementById('calendario-senior').open=true;"
    class="card category-card">
-  <h3>📅 Calendario</h3>
+  <h3><i class="fa-solid fa-calendar-days icon"></i>Calendario</h3>
   <p>Calendario de juegos de la categoría SENIOR</p>
   <span>VER CALENDARIO →</span>
 </a>
 
     <a href="#resultados-senior" class="card category-card">
-    <h3>🏆 Resultados</h3>
+    <h3><i class="fa-solid fa-trophy icon"></i>Resultados</h3>
     <p>Resultados oficiales de la categoría SENIOR</p>
     <span>VER RESULTADOS →</span>
 </a>
@@ -505,7 +511,7 @@ z-index: 3;
     <a href="#brackets-senior"
   onclick="document.getElementById('brackets-senior').hidden=false; document.getElementById('brackets-senior').open=true;"
   class="card category-card">
-  <h3>🔥 Bracket</h3>
+  <h3><i class="fa-solid fa-diagram-project icon"></i>Bracket</h3>
   <p>Bracket oficial de la categoría SENIOR</p>
   <span>VER BRACKET →</span>
 </a>
@@ -514,7 +520,7 @@ z-index: 3;
 </section>
 
 <details id="calendario-senior" class="game" hidden>
-  <summary class="game-date">📅 HORARIOS DE JUEGO · SENIOR</summary>
+  <summary class="game-date"><i class="fa-solid fa-calendar-days icon"></i>HORARIOS DE JUEGO · SENIOR</summary>
 
   <div class="matchup">
     <span>DÍA 1</span>
@@ -533,7 +539,7 @@ z-index: 3;
 
   <div class="matchup">
     <span>DÍA 4</span>
-    <span>10:00 AM SF1 · 12:00 PM SF2 · 2:00 PM FINAL 🏆</span>
+    <span>10:00 AM SF1 · 12:00 PM SF2 · 2:00 PM FINAL <i class="fa-solid fa-trophy icon"></i></span>
   </div>
 
   <div style="text-align:center; margin-top:15px;">
@@ -555,7 +561,7 @@ z-index: 3;
   <div class="grid">
 
     <a href="#equipos-senior-femenino" class="card category-card">
-    <h3>🏀 Equipos</h3>
+    <h3><i class="fa-solid fa-users icon"></i>Equipos</h3>
     <p>8 equipos participantes</p>
     <span>VER EQUIPOS →</span>
 </a>
@@ -563,19 +569,19 @@ z-index: 3;
    <a href="#calendario-senior-femenino"
    onclick="document.getElementById('calendario-senior-femenino').hidden=false; document.getElementById('calendario-senior-femenino').open=true;"
    class="card category-card">
-  <h3>📅 Calendario</h3>
+  <h3><i class="fa-solid fa-calendar-days icon"></i>Calendario</h3>
   <p>Calendario de juegos de la categoría SENIOR FEMENINO</p>
   <span>VER CALENDARIO →</span>
 </a>
 
     <a href="#resultados-senior-femenino" class="card category-card">
-    <h3>🏆 Resultados</h3>
+    <h3><i class="fa-solid fa-trophy icon"></i>Resultados</h3>
     <p>Resultados oficiales de la categoría SENIOR FEMENINO</p>
     <span>VER RESULTADOS →</span>
 </a>
 
     <a href="#brackets-senior-femenino" class="card category-card">
-    <h3>🔥 Bracket</h3>
+    <h3><i class="fa-solid fa-diagram-project icon"></i>Bracket</h3>
     <p>Bracket oficial de la categoría SENIOR FEMENINO</p>
     <span>VER BRACKET →</span>
 </a>
@@ -584,7 +590,7 @@ z-index: 3;
 
 </section>
   <details id="calendario-senior-femenino" class="game" hidden>
-  <summary class="game-date">📅 HORARIOS DE JUEGO · SENIOR FEMENINO</summary>
+  <summary class="game-date"><i class="fa-solid fa-calendar-days icon"></i>HORARIOS DE JUEGO · SENIOR FEMENINO</summary>
 
   <div class="matchup">
     <span>DÍA 1</span>
@@ -598,7 +604,7 @@ z-index: 3;
 
   <div class="matchup">
     <span>DÍA 3</span>
-    <span>10:00 AM · 12:00 PM SF1 · 2:00 PM SF2 · 4:00 PM FINAL 🏆</span>
+    <span>10:00 AM · 12:00 PM SF1 · 2:00 PM SF2 · 4:00 PM FINAL <i class="fa-solid fa-trophy icon"></i></span>
   </div>
 
   <div style="text-align:center; margin-top:15px;">
@@ -733,7 +739,7 @@ z-index: 3;
   </div>
 
   <div class="matchup">
-    <span>4:00 PM · SENIOR FEMENINO · FINAL 🏆</span>
+    <span>4:00 PM · SENIOR FEMENINO · FINAL <i class="fa-solid fa-trophy icon"></i></span>
     <span class="vs">VS</span>
     <span>POR DEFINIR</span>
   </div>
@@ -798,13 +804,13 @@ z-index: 3;
   </div>
 
   <div class="matchup">
-    <span>1:00 PM · JUNIOR · FINAL 🏆</span>
+    <span>1:00 PM · JUNIOR · FINAL <i class="fa-solid fa-trophy icon"></i></span>
     <span class="vs">VS</span>
     <span>POR DEFINIR</span>
   </div>
 
   <div class="matchup">
-    <span>2:00 PM · SENIOR · FINAL 🏆</span>
+    <span>2:00 PM · SENIOR · FINAL <i class="fa-solid fa-trophy icon"></i></span>
     <span class="vs">VS</span>
     <span>POR DEFINIR</span>
   </div>
@@ -820,12 +826,12 @@ z-index: 3;
 
   <div class="grid">
     <div class="card">
-      <h3>🏀 Resultados</h3>
+      <h3><i class="fa-solid fa-chart-column icon"></i>Resultados</h3>
       <p>Los resultados oficiales aparecerán aquí una vez comience la competencia.</p>
     </div>
 
     <div class="card">
-      <h3>📅 Última Jornada</h3>
+      <h3><i class="fa-solid fa-calendar-check icon"></i>Última Jornada</h3>
       <p>Consulta aquí los marcadores de la jornada más reciente.</p>
     </div>
   </div>
@@ -837,7 +843,7 @@ z-index: 3;
 
   <div style="padding:30px 15px; background:rgba(20,70,45,.35); border:1px solid rgba(255,255,255,.25); border-radius:18px; margin:25px 0;">
 
-    <h2 style="text-align:center; margin-bottom:5px;">🔥 BRACKET SENIOR</h2>
+    <h2 style="text-align:center; margin-bottom:5px;"><i class="fa-solid fa-diagram-project icon"></i>BRACKET SENIOR</h2>
     <p style="text-align:center; margin-bottom:30px;">
       <strong>12 equipos · Eliminación sencilla</strong>
     </p>
@@ -969,7 +975,7 @@ z-index: 3;
 
     <div style="max-width:500px; margin:0 auto; border:2px solid #d4a84b; border-radius:16px; padding:20px;">
 
-      <h2 style="text-align:center;">🏆 FINAL</h2>
+      <h2 style="text-align:center;"><i class="fa-solid fa-trophy icon"></i>FINAL</h2>
 
       <div class="matchup">
         <span>Ganador Lado Izquierdo</span>
@@ -1062,7 +1068,7 @@ z-index: 3;
 
   
 <div class="card">
-  <h3>📄 Reglamento Oficial</h3>
+  <h3><i class="fa-solid fa-file-shield icon"></i>Reglamento Oficial</h3>
   <p>
     Consulta el reglamento oficial, requisitos de participación
     y normas de competencia del Las Marías Elite Classic Basketball.
@@ -1071,7 +1077,7 @@ z-index: 3;
   <a href="LM-ELITE-CLASSIC-BASKETBALL-RULES.pdf"
      target="_blank"
      class="btn">
-    📖 Ver Reglamento Oficial
+    <i class="fa-solid fa-book-open icon"></i>Ver Reglamento Oficial
   </a>
 </div>
 </section>
@@ -1086,7 +1092,7 @@ z-index: 3;
   <div class="grid">
 
     <div class="card">
-      <h3>🪪 Carnet de Jugadores</h3>
+      <h3><i class="fa-solid fa-id-card icon"></i>Carnet de Jugadores</h3>
       <p>Formulario oficial para jugadores.</p>
       <a href="LMEC_CARNET_JUGADORES_BALONCESTO_.pdf" download class="btn">
         DESCARGAR PDF
@@ -1094,7 +1100,7 @@ z-index: 3;
     </div>
 
     <div class="card">
-      <h3>📋 Roster</h3>
+      <h3><i class="fa-solid fa-clipboard-list icon"></i>Roster</h3>
       <p>Roster oficial de jugadores.</p>
       <a href="LMEC_ROSTER_JUGADORES_BALONCESTO.pdf" download class="btn">
         DESCARGAR PDF
@@ -1102,7 +1108,7 @@ z-index: 3;
     </div>
 
     <div class="card">
-      <h3>📄 Relevo de Responsabilidad</h3>
+      <h3><i class="fa-solid fa-file-signature icon"></i>Relevo de Responsabilidad</h3>
       <p>Formulario de relevo de responsabilidad.</p>
       <a href="LMEC_RELEVO_DE_RESPONSABILIDAD_BALONCESTO_.pdf" download class="btn">
         DESCARGAR PDF
@@ -1110,7 +1116,7 @@ z-index: 3;
     </div>
 
     <div class="card">
-      <h3>🪪 Carnet de Staff</h3>
+      <h3><i class="fa-solid fa-id-badge icon"></i>Carnet de Staff</h3>
       <p>Formulario oficial para el staff técnico.</p>
       <a href="LMEC_CARNET_STAFF_TECNICO_BALONCESTO_.pdf" download class="btn">
         DESCARGAR PDF
