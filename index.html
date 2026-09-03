@@ -437,7 +437,7 @@ z-index: 3;
     <span>VER RESULTADOS →</span>
 </a>
 
-    <a href="#brackets-junior" class="card category-card">
+    <a href="#brackets-junior" onclick="document.getElementById('brackets-junior').hidden=false;" class="card category-card">
     <h3><i class="fa-solid fa-diagram-project icon"></i>Bracket</h3>
     <p>Bracket oficial de la categoría JUNIOR</p>
     <span>VER BRACKET →</span>
@@ -446,7 +446,26 @@ z-index: 3;
   </div>
 
 </section>
+<!-- BRACKET JUNIOR OCULTO -->
+<div id="brackets-junior" hidden>
 
+  <div style="text-align:center; padding:20px 10px;">
+
+    <img src="LMEC JUNIOR BRACKET.PNG"
+         alt="Bracket Junior - Las Marías Elite Classic"
+         style="width:100%; max-width:1400px; height:auto; border-radius:14px;">
+
+    <div style="margin-top:20px;">
+      <button
+        onclick="document.getElementById('brackets-junior').hidden=true;"
+        class="btn">
+        CERRAR BRACKET
+      </button>
+    </div>
+
+  </div>
+
+</div>
 <details id="calendario-junior" class="game" hidden>
   <summary class="game-date"><i class="fa-solid fa-calendar-days icon"></i>HORARIOS DE JUEGO · JUNIOR</summary>
 
