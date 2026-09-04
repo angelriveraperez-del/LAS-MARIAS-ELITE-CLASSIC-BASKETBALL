@@ -715,7 +715,9 @@ z-index: 3;
     <span>VER RESULTADOS →</span>
 </a>
 
-    <a href="#brackets-senior-femenino" class="card category-card">
+    <a href="#brackets-senior-femenino"
+   onclick="document.getElementById('brackets-senior-femenino').hidden=false;"
+   class="card category-card">
     <h3><i class="fa-solid fa-diagram-project icon"></i>Bracket</h3>
     <p>Bracket oficial de la categoría SENIOR FEMENINO</p>
     <span>VER BRACKET →</span>
@@ -724,7 +726,29 @@ z-index: 3;
   </div>
 
 </section>
+<!-- BRACKET SENIOR FEMENINO -->
+<div id="brackets-senior-femenino" hidden>
+
+  <div style="text-align:center; padding:20px 10px;">
+
+    <img src="LMEC FEMENINO BRACKET.PNG"
+         alt="Bracket Senior Femenino – Las Marías Elite Classic Basketball"
+         style="width:100%; max-width:1400px; height:auto; border-radius:12px;">
+
+    <div style="margin-top:20px;">
+      <button
+        onclick="document.getElementById('brackets-senior-femenino').hidden=true;"
+        class="btn">
+        CERRAR BRACKET
+      </button>
+    </div>
+
+  </div>
+
+</div>
+  
 <details id="calendario-senior-femenino" class="game" hidden>
+  
 
   <summary class="game-date">
     <i class="fa-solid fa-calendar-days icon"></i>
