@@ -322,6 +322,23 @@ z-index: 3;
         font-size: 15px;
       }
     }
+/* GALERÍA */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+  margin-top:25px;
+}
+
+.gallery-grid img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:14px;
+  display:block;
+}
+
+    
   </style>
 </head>
 
@@ -349,6 +366,7 @@ z-index: 3;
   <a href="#categorias">Categorías</a>
   <a href="#calendario">Calendario</a>
   <a href="#resultados">Resultados</a>
+  <a href="#galeria">Galería</a>
   
   <a href="#equipos">Equipos</a>
   <a href="#reglamento">Reglamento</a>
@@ -1037,7 +1055,22 @@ z-index: 3;
     </div>
   </div>
 </section>
+<!-- GALERÍA -->
+<section id="galeria">
 
+  <div class="section-title">
+    <small>Momentos del Torneo</small>
+    <h2>Galería</h2>
+    <p>Fotos oficiales del Las Marías Elite Classic Basketball</p>
+  </div>
+
+  <div class="gallery-grid">
+
+    <!-- LAS FOTOS SE AÑADIRÁN AQUÍ -->
+
+  </div>
+
+</section>
 
 <!-- BRACKET SENIOR -->
 <div id="brackets-senior" hidden>
