@@ -1059,26 +1059,32 @@ z-index: 3;
     <h2>Resultados Recientes</h2>
     <p>Resultados oficiales del Las Marías Elite Classic Basketball</p>
   </div>
-<div style="text-align:center; margin-bottom:20px;">
-  <button
-    onclick="document.getElementById('scores-resultados').hidden=false;"
-    class="btn">
-    VER RESULTADOS
-  </button>
-</div>
-  <div id="scores-resultados" class="matchup final" hidden>
 
-    
-    <span>17 SEP · FINAL · JUNIOR</span>
-    <span class="winner">LARES A · 68</span>
-    <span>HOSTOS · 61</span>
-    <div style="text-align:center; margin-top:20px;">
-  <button
-    onclick="document.getElementById('scores-resultados').hidden=true;"
-    class="btn">
-    CERRAR RESULTADOS
-  </button>
-</div>
+  <div style="text-align:center;">
+    <button
+      id="btn-ver-resultados"
+      onclick="document.getElementById('scores-resultados').hidden=false; this.hidden=true;"
+      class="btn">
+      VER RESULTADOS
+    </button>
+  </div>
+
+  <div id="scores-resultados" hidden style="max-width:700px; margin:25px auto 0;">
+
+    <div class="matchup final">
+      <span>17 SEP · FINAL · JUNIOR</span>
+      <span class="winner">LARES A · 68</span>
+      <span>HOSTOS · 61</span>
+    </div>
+
+    <div style="text-align:center; margin-top:18px;">
+      <button
+        onclick="document.getElementById('scores-resultados').hidden=true; document.getElementById('btn-ver-resultados').hidden=false;"
+        class="btn">
+        CERRAR RESULTADOS
+      </button>
+    </div>
+
   </div>
 
 </section>
