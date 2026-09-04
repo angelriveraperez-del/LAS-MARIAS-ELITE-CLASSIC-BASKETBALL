@@ -1122,23 +1122,44 @@ z-index: 3;
   </div>
   </div>
 </section>
+
 <!-- GALERÍA -->
 <section id="galeria">
 
-  <div class="section-title">
-    <small>Momentos del Torneo</small>
-    <h2>Galería</h2>
-    <p>Fotos oficiales del Las Marías Elite Classic Basketball</p>
-  </div>
+  <div class="resultados-card">
 
-  <div class="gallery-grid">
+    <div class="section-title">
+      <small>Momentos del Torneo</small>
+      <h2>Galería</h2>
+      <p>Fotos oficiales del Las Marías Elite Classic Basketball</p>
+    </div>
 
-    <div id="galeria-fotos"></div>
+    <div style="text-align:center;">
+      <button
+        id="btn-ver-galeria"
+        onclick="document.getElementById('fotos-galeria').hidden=false; this.hidden=true;"
+        class="btn">
+        VER GALERÍA
+      </button>
+    </div>
+
+    <div id="fotos-galeria" hidden style="margin-top:25px;">
+
+      <div id="galeria-fotos" class="gallery-grid"></div>
+
+      <div style="text-align:center; margin-top:20px;">
+        <button
+          onclick="document.getElementById('fotos-galeria').hidden=true; document.getElementById('btn-ver-galeria').hidden=false;"
+          class="btn">
+          CERRAR GALERÍA
+        </button>
+      </div>
+
+    </div>
 
   </div>
 
 </section>
-
 <!-- BRACKET SENIOR -->
 <div id="brackets-senior" hidden>
 
