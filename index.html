@@ -1233,5 +1233,19 @@ z-index: 3;
   © 2026 • Todos los derechos reservados
 </footer>
 
+
+  <script src="galeria/fotos.js"></script>
+
+<script>
+  const contenedorGaleria = document.getElementById("galeria-fotos");
+
+  fotos.forEach(function(foto) {
+    const imagen = document.createElement("img");
+    imagen.src = "galeria/" + foto;
+    imagen.alt = "Las Marías Elite Classic Basketball";
+    imagen.loading = "lazy";
+    contenedorGaleria.appendChild(imagen);
+  });
+</script>
 </body>
 </html>
