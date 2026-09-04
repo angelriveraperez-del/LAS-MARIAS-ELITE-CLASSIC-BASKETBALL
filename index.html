@@ -226,6 +226,19 @@ z-index: 3;
     border: 1px solid rgba(221,167,67,.22);
     border-radius: 10px;
 }
+    .matchup.final {
+  border-color: #f4a600;
+}
+
+.matchup.final .vs {
+  color: #f4a600;
+  font-weight: 900;
+}
+
+.matchup.final .winner {
+  color: #f4a600;
+  font-weight: 900;
+}
 
 .matchup span:first-child {
     text-align: left;
@@ -365,7 +378,7 @@ z-index: 3;
   <a href="#inicio">Inicio</a>
   <a href="#categorias">Categorías</a>
   <a href="#calendario">Calendario</a>
-  <a href="#resultados">Resultados</a>
+  <a href="#calendario">Resultados</a>
   <a href="#galeria">Galería</a>
   
   <a href="#equipos">Equipos</a>
@@ -491,11 +504,11 @@ z-index: 3;
     HORARIOS DE JUEGO · JUNIOR
   </summary>
 
-  <div class="matchup">
-    <span>17 SEP · 6:00 PM · LARES A</span>
-    <span class="vs">VS</span>
-    <span>HOSTOS</span>
-  </div>
+  <div class="matchup final">
+  <span>17 SEP · FINAL</span>
+  <span class="winner">LARES A · 68</span>
+  <span>HOSTOS · 61</span>
+</div>
 
   <div class="matchup">
     <span>17 SEP · 8:00 PM · MARICAO</span>
@@ -1037,24 +1050,7 @@ z-index: 3;
   </details>
 
 </section>
-<section id="resultados">
-  <div class="section-title">
-    <small>Marcadores</small>
-    <h2>Resultados</h2>
-  </div>
 
-  <div class="grid">
-    <div class="card">
-      <h3><i class="fa-solid fa-chart-column icon"></i>Resultados</h3>
-      <p>Los resultados oficiales aparecerán aquí una vez comience la competencia.</p>
-    </div>
-
-    <div class="card">
-      <h3><i class="fa-solid fa-calendar-check icon"></i>Última Jornada</h3>
-      <p>Consulta aquí los marcadores de la jornada más reciente.</p>
-    </div>
-  </div>
-</section>
 <!-- GALERÍA -->
 <section id="galeria">
 
