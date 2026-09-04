@@ -1,1 +1,1 @@
-const fotos = ["IMG_6664.jpeg"];
+const fotos = [];
