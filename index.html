@@ -1032,6 +1032,25 @@ z-index: 3;
   </div>
 
 </details>
+<!-- PRÓXIMOS JUEGOS AUTOMÁTICOS -->
+<section id="proximos-juegos">
+  <div class="resultados-card">
+
+    <div class="section-title">
+      <small>Lo próximo en cancha</small>
+      <h2>Próximos Juegos</h2>
+      <p>Los próximos partidos del Las Marías Elite Classic Basketball</p>
+    </div>
+
+    <div id="lista-proximos-juegos"></div>
+
+    <div style="text-align:center; margin-top:20px;">
+      <a href="#calendario" class="btn">VER CALENDARIO COMPLETO</a>
+    </div>
+
+  </div>
+</section>
+  
 <section id="calendario">
 
   <div class="section-title">
@@ -1564,6 +1583,88 @@ z-index: 3;
     imagen.loading = "lazy";
     contenedorGaleria.appendChild(imagen);
   });
+</script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const contenedor = document.getElementById("lista-proximos-juegos");
+  const calendario = document.getElementById("calendario");
+
+  if (!contenedor || !calendario) return;
+
+  const meses = {
+    "ENERO": 0, "FEBRERO": 1, "MARZO": 2, "ABRIL": 3,
+    "MAYO": 4, "JUNIO": 5, "JULIO": 6, "AGOSTO": 7,
+    "SEPTIEMBRE": 8, "OCTUBRE": 9, "NOVIEMBRE": 10,
+    "DICIEMBRE": 11
+  };
+
+  const juegos = [];
+
+  calendario.querySelectorAll("details.game").forEach(function(dia) {
+
+    const resumen = dia.querySelector(".game-date");
+    if (!resumen) return;
+
+    const textoFecha = resumen.textContent.trim().toUpperCase();
+    const fechaMatch = textoFecha.match(/(\d{1,2})\s+DE\s+([A-ZÁÉÍÓÚÑ]+)/);
+
+    if (!fechaMatch) return;
+
+    const numeroDia = parseInt(fechaMatch[1]);
+    const mes = meses[fechaMatch[2]];
+
+    if (mes === undefined) return;
+
+    dia.querySelectorAll(".matchup").forEach(function(partido) {
+
+      const spans = partido.querySelectorAll("span");
+      if (spans.length < 3) return;
+
+      const info = spans[0].textContent.trim();
+      const rival = spans[2].textContent.trim();
+
+      const horaMatch = info.match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i);
+      if (!horaMatch) return;
+
+      let hora = parseInt(horaMatch[1]);
+      const minutos = parseInt(horaMatch[2]);
+      const periodo = horaMatch[3].toUpperCase();
+
+      if (periodo === "PM" && hora !== 12) hora += 12;
+      if (periodo === "AM" && hora === 12) hora = 0;
+
+      const fechaJuego = new Date(2026, mes, numeroDia, hora, minutos);
+
+      juegos.push({
+        fecha: fechaJuego,
+        elemento: partido.cloneNode(true)
+      });
+
+    });
+
+  });
+
+  const ahora = new Date();
+
+  const proximos = juegos
+    .filter(juego => juego.fecha > ahora)
+    .sort((a, b) => a.fecha - b.fecha)
+    .slice(0, 3);
+
+  contenedor.innerHTML = "";
+
+  if (proximos.length === 0) {
+    contenedor.innerHTML =
+      '<p style="text-align:center;">No hay próximos juegos programados.</p>';
+    return;
+  }
+
+  proximos.forEach(function(juego) {
+    contenedor.appendChild(juego.elemento);
+  });
+
+});
 </script>
 </body>
 </html>
