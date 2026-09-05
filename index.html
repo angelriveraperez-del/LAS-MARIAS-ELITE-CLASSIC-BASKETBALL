@@ -1302,7 +1302,7 @@ z-index: 3;
   </div>
 
   <div id="scores-resultados" hidden style="max-width:700px; margin:25px auto 0;">
-
+<div id="resultados-automaticos"></div>
     
 
     <div style="text-align:center; margin-top:18px;">
@@ -1667,5 +1667,64 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+<script>
+const URL_RESULTADOS = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQOublsYbF0dDD0xpIHzZX7uJl1vh5967jPDOwHT2Iw9ECMrqZRNW3PYGkuNqqs71RocsSkPwQThmdH/pub?gid=1902640657&single=true&output=csv";
+</script>
+<script>
+async function cargarResultados() {
+  const contenedor = document.getElementById("resultados-automaticos");
+
+  try {
+    const respuesta = await fetch(URL_RESULTADOS + "&t=" + Date.now());
+    const texto = await respuesta.text();
+
+    const filas = texto.trim().split(/\r?\n/).slice(1);
+
+    contenedor.innerHTML = "";
+
+    filas.reverse().forEach(fila => {
+      const columnas = fila.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
+      if (!columnas || columnas.length < 8) return;
+
+      const limpiar = valor =>
+        valor ? valor.replace(/^"|"$/g, "").replace(/""/g, '"').trim() : "";
+
+      const categoria = limpiar(columnas[2]);
+      const equipo1 = limpiar(columnas[3]);
+      const marcador1 = limpiar(columnas[4]);
+      const equipo2 = limpiar(columnas[5]);
+      const marcador2 = limpiar(columnas[6]);
+      const estado = limpiar(columnas[7]);
+
+      if (!equipo1 || !equipo2 || !marcador1 || !marcador2) return;
+
+      const puntos1 = Number(marcador1);
+      const puntos2 = Number(marcador2);
+
+      const clase1 = puntos1 > puntos2 ? "winner" : "";
+      const clase2 = puntos2 > puntos1 ? "winner" : "";
+
+      contenedor.innerHTML += `
+        <div class="matchup final">
+          <span>${estado} · ${categoria}</span>
+          <span class="${clase1}">${equipo1} · ${marcador1}</span>
+          <span class="${clase2}">${equipo2} · ${marcador2}</span>
+        </div>
+      `;
+    });
+
+    if (contenedor.innerHTML === "") {
+      contenedor.innerHTML =
+        '<p style="text-align:center;">No hay resultados publicados todavía.</p>';
+    }
+
+  } catch (error) {
+    contenedor.innerHTML =
+      '<p style="text-align:center;">No se pudieron cargar los resultados.</p>';
+  }
+}
+
+cargarResultados();
+</script>  
 </body>
 </html>
